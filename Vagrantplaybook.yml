@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  roles:
+  - ../ansible-role-ansibleenv
+
+#  tasks:
+#  - include_vars: defaults/main.yml
+#  - include: tasks/main.yml
