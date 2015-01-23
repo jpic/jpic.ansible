@@ -1,3 +1,5 @@
 ---
 
 - template: src=ansible.cfg dest={{ ansibleenv_cfg }}
+
+- file: path={{ ansibleenv_root }} state=directory
