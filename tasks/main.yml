@@ -3,3 +3,14 @@
 - template: src=ansible.cfg dest={{ ansibleenv_cfg }}
 
 - file: path={{ ansibleenv_root }} state=directory
+
+- file: path={{ ansibleenv_root }}/{{ item }} state=directory
+  with_items:
+  - action_plugins
+  - callback_plugins
+  - connection_plugins
+  - filter_plugins
+  - library
+  - lookup_plugins
+  - roles
+  - vars_plugins
