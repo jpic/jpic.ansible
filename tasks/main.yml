@@ -14,3 +14,8 @@
   - lookup_plugins
   - roles
   - vars_plugins
+
+- action: git
+          repo='{{ item.value }}'
+          dest='{{ ansibleenv_root }}/library/{{ item.key }}'
+  with_dict: ansibleenv_libraries

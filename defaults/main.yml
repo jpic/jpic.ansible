@@ -1,3 +1,4 @@
 ---
 ansibleenv_cfg: ~/.ansible.cfg
 ansibleenv_root: ~/ansibleenv
+ansibleenv_libraries: []

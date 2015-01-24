@@ -11,6 +11,8 @@ Role Variables
 - ansibleenv_cfg: path to the configuration file to write (default:
   ~/.ansible.cfg)
 - ansibleenv_root: path to the ansibleenv root (default: ~/ansibleenv)
+- ansibleenv_libraries: list of git repositories to clone in 
+  ``{{ ansibleenv_root }}/libraries``.
 
 
 Example Playbook
@@ -20,9 +22,12 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - role: jpic.ansibleenv
-           ansibleenv_cfg: ~/.ansible.cfg
-           ansibleenv_root: ~/ansibleenv
+      - role: jpic.ansibleenv
+        ansibleenv_cfg: ~/.ansible.cfg
+        ansibleenv_root: ~/ansibleenv
+        ansibleenv_libraries:
+        - https://github.com:robparrott/ansible-vagrant.git
+
 
 License
 -------
