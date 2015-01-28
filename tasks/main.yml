@@ -1,10 +1,10 @@
 ---
 
-- template: src=ansible.cfg dest={{ ansibleenv_cfg }}
+- template: src=ansible.cfg dest={{ ansible_cfg }}
 
-- file: path={{ ansibleenv_root }} state=directory
+- file: path={{ ansible_root }} state=directory
 
-- file: path={{ ansibleenv_root }}/{{ item }} state=directory
+- file: path={{ ansible_root }}/{{ item }} state=directory
   with_items:
   - action_plugins
   - callback_plugins
@@ -17,5 +17,5 @@
 
 - action: git
           repo='{{ item.value }}'
-          dest='{{ ansibleenv_root }}/library/{{ item.key }}'
-  with_dict: ansibleenv_libraries
+          dest='{{ ansible_root }}/library/{{ item.key }}'
+  with_dict: ansible_libraries

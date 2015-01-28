@@ -3,5 +3,5 @@
 - hosts: all
   roles:
   - role: .
-    ansibleenv_libraries:
+    ansible_libraries:
       'robparrott.vagrant': https://github.com/robparrott/ansible-vagrant.git

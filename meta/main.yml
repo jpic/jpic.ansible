@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: James Pic
-  description: Ansible role to create an ansibleenv
+  description: Ansible role to create an ansible
   company: YourLabs
   license: BSD
   min_ansible_version: 1.2
