@@ -2,3 +2,4 @@
 ansible_cfg: ~/.ansible.cfg
 ansible_root: ~/ansible
 ansible_libraries: {}
+ansible_connection_plugins: {}

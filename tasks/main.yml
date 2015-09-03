@@ -19,3 +19,8 @@
           repo='{{ item.value }}'
           dest='{{ ansible_root }}/library/{{ item.key }}'
   with_dict: ansible_libraries
+
+- action: git
+          repo='{{ item.value }}'
+          dest='{{ ansible_root }}/connection_plugins/{{ item.key }}'
+  with_dict: ansible_connection_plugins
